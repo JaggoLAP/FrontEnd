@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuperacion de clave</title>
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+</head>
+<body>
+    <form action="/validar_codigo" method="post">
+        <div class="box">
+            <span class="borderline"></span>
+                <div class="form">
+                    <h2>Restablecer contraseña</h2>
+                    <div class="inputBox">
+                        <span>Recibirá un codigo en su email:</span>
+                    </div>
+                    <div class="inputBox">
+                        <span>Se ha enviado un código de validación al correo electrónico: {{ email }}</span>
+                        <br><br><br>
+                    </div>
+                    <div class="inputBox">
+                        <input type="text"  id="codigo" name="codigo" required>
+                        <span>Código de Validación:</span>
+                        <i></i>
+                    </div>
+                    <div class="inputBox">
+                        <input type="hidden" name="codigo_correcto" value="{{ codigo }}">
+                    </div>
+                    <input type="submit" value="Validar">
+                </div>
+        </div>
+        </form>
+</body>
+</html>
